@@ -41,8 +41,8 @@
             this.txt_OperadoraSelecionada = new System.Windows.Forms.TextBox();
             this.lbl_DDD = new System.Windows.Forms.Label();
             this.txt_DDD = new System.Windows.Forms.TextBox();
-            this.lbl_NumeroCelular = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.lbl_NumerodeCelular = new System.Windows.Forms.Label();
+            this.Txt_NumerodeCelular = new System.Windows.Forms.TextBox();
             this.lbl_ValorRecarga = new System.Windows.Forms.Label();
             this.txt_ValorRecarga = new System.Windows.Forms.TextBox();
             this.btn_RS1 = new System.Windows.Forms.Button();
@@ -103,6 +103,7 @@
             this.btn_Oi.TabIndex = 3;
             this.btn_Oi.Text = "Oi";
             this.btn_Oi.UseVisualStyleBackColor = true;
+            this.btn_Oi.CheckedChanged += new System.EventHandler(this.btn_Oi_CheckedChanged);
             // 
             // btn_Tim
             // 
@@ -113,6 +114,7 @@
             this.btn_Tim.TabIndex = 2;
             this.btn_Tim.Text = "Tim";
             this.btn_Tim.UseVisualStyleBackColor = true;
+            this.btn_Tim.CheckedChanged += new System.EventHandler(this.btn_Tim_CheckedChanged);
             // 
             // btn_Claro
             // 
@@ -123,6 +125,7 @@
             this.btn_Claro.TabIndex = 1;
             this.btn_Claro.Text = "Claro";
             this.btn_Claro.UseVisualStyleBackColor = true;
+            this.btn_Claro.CheckedChanged += new System.EventHandler(this.btn_Claro_CheckedChanged);
             // 
             // btn_Vivo
             // 
@@ -154,6 +157,7 @@
             this.txt_nome.Name = "txt_nome";
             this.txt_nome.Size = new System.Drawing.Size(272, 20);
             this.txt_nome.TabIndex = 3;
+            this.txt_nome.TextChanged += new System.EventHandler(this.txt_nome_TextChanged);
             // 
             // lbl_Nome
             // 
@@ -176,6 +180,7 @@
             this.lbl_OperadoraSelecionada.Size = new System.Drawing.Size(159, 15);
             this.lbl_OperadoraSelecionada.TabIndex = 5;
             this.lbl_OperadoraSelecionada.Text = "Operadora Selecionada";
+            this.lbl_OperadoraSelecionada.Click += new System.EventHandler(this.lbl_OperadoraSelecionada_Click);
             // 
             // txt_OperadoraSelecionada
             // 
@@ -184,6 +189,7 @@
             this.txt_OperadoraSelecionada.Name = "txt_OperadoraSelecionada";
             this.txt_OperadoraSelecionada.Size = new System.Drawing.Size(182, 20);
             this.txt_OperadoraSelecionada.TabIndex = 6;
+            this.txt_OperadoraSelecionada.TextChanged += new System.EventHandler(this.txt_OperadoraSelecionada_TextChanged);
             // 
             // lbl_DDD
             // 
@@ -204,24 +210,24 @@
             this.txt_DDD.Size = new System.Drawing.Size(34, 20);
             this.txt_DDD.TabIndex = 8;
             // 
-            // lbl_NumeroCelular
+            // lbl_NumerodeCelular
             // 
-            this.lbl_NumeroCelular.AutoSize = true;
-            this.lbl_NumeroCelular.Enabled = false;
-            this.lbl_NumeroCelular.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_NumeroCelular.Location = new System.Drawing.Point(423, 186);
-            this.lbl_NumeroCelular.Name = "lbl_NumeroCelular";
-            this.lbl_NumeroCelular.Size = new System.Drawing.Size(128, 15);
-            this.lbl_NumeroCelular.TabIndex = 9;
-            this.lbl_NumeroCelular.Text = "Número de Celular";
+            this.lbl_NumerodeCelular.AutoSize = true;
+            this.lbl_NumerodeCelular.Enabled = false;
+            this.lbl_NumerodeCelular.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_NumerodeCelular.Location = new System.Drawing.Point(423, 186);
+            this.lbl_NumerodeCelular.Name = "lbl_NumerodeCelular";
+            this.lbl_NumerodeCelular.Size = new System.Drawing.Size(128, 15);
+            this.lbl_NumerodeCelular.TabIndex = 9;
+            this.lbl_NumerodeCelular.Text = "Número de Celular";
             // 
-            // textBox1
+            // Txt_NumerodeCelular
             // 
-            this.textBox1.Enabled = false;
-            this.textBox1.Location = new System.Drawing.Point(426, 204);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(125, 20);
-            this.textBox1.TabIndex = 10;
+            this.Txt_NumerodeCelular.Enabled = false;
+            this.Txt_NumerodeCelular.Location = new System.Drawing.Point(426, 204);
+            this.Txt_NumerodeCelular.Name = "Txt_NumerodeCelular";
+            this.Txt_NumerodeCelular.Size = new System.Drawing.Size(125, 20);
+            this.Txt_NumerodeCelular.TabIndex = 10;
             // 
             // lbl_ValorRecarga
             // 
@@ -487,8 +493,8 @@
             this.Controls.Add(this.btn_RS1);
             this.Controls.Add(this.txt_ValorRecarga);
             this.Controls.Add(this.lbl_ValorRecarga);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.lbl_NumeroCelular);
+            this.Controls.Add(this.Txt_NumerodeCelular);
+            this.Controls.Add(this.lbl_NumerodeCelular);
             this.Controls.Add(this.txt_DDD);
             this.Controls.Add(this.lbl_DDD);
             this.Controls.Add(this.txt_OperadoraSelecionada);
@@ -498,6 +504,7 @@
             this.Controls.Add(this.lbl_BemVindo);
             this.Controls.Add(this.grp_operadoras);
             this.Controls.Add(this.label1);
+            this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Name = "frm_principal";
             this.Text = "Regarga para Celular";
             this.grp_operadoras.ResumeLayout(false);
@@ -523,8 +530,8 @@
         private System.Windows.Forms.TextBox txt_OperadoraSelecionada;
         private System.Windows.Forms.Label lbl_DDD;
         private System.Windows.Forms.TextBox txt_DDD;
-        private System.Windows.Forms.Label lbl_NumeroCelular;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label lbl_NumerodeCelular;
+        private System.Windows.Forms.TextBox Txt_NumerodeCelular;
         private System.Windows.Forms.Label lbl_ValorRecarga;
         private System.Windows.Forms.TextBox txt_ValorRecarga;
         private System.Windows.Forms.Button btn_RS1;
