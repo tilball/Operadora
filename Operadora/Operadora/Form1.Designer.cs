@@ -30,10 +30,10 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.grp_operadoras = new System.Windows.Forms.GroupBox();
-            this.btn_Vivo = new System.Windows.Forms.RadioButton();
-            this.btn_Claro = new System.Windows.Forms.RadioButton();
-            this.btn_Tim = new System.Windows.Forms.RadioButton();
             this.btn_Oi = new System.Windows.Forms.RadioButton();
+            this.btn_Tim = new System.Windows.Forms.RadioButton();
+            this.btn_Claro = new System.Windows.Forms.RadioButton();
+            this.btn_Vivo = new System.Windows.Forms.RadioButton();
             this.lbl_BemVindo = new System.Windows.Forms.Label();
             this.txt_nome = new System.Windows.Forms.TextBox();
             this.lbl_Nome = new System.Windows.Forms.Label();
@@ -76,8 +76,9 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(776, 41);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Recarga de Celular";
+            this.label1.Text = "Dados da Recarga";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // grp_operadoras
             // 
@@ -93,46 +94,46 @@
             this.grp_operadoras.TabStop = false;
             this.grp_operadoras.Text = "Operadoras";
             // 
-            // btn_Vivo
+            // btn_Oi
             // 
-            this.btn_Vivo.AutoSize = true;
-            this.btn_Vivo.Location = new System.Drawing.Point(7, 42);
-            this.btn_Vivo.Name = "btn_Vivo";
-            this.btn_Vivo.Size = new System.Drawing.Size(56, 20);
-            this.btn_Vivo.TabIndex = 0;
-            this.btn_Vivo.Text = "Vivo";
-            this.btn_Vivo.UseVisualStyleBackColor = true;
-            this.btn_Vivo.CheckedChanged += new System.EventHandler(this.btn_Vivo_CheckedChanged);
-            // 
-            // btn_Claro
-            // 
-            this.btn_Claro.AutoSize = true;
-            this.btn_Claro.Location = new System.Drawing.Point(7, 69);
-            this.btn_Claro.Name = "btn_Claro";
-            this.btn_Claro.Size = new System.Drawing.Size(62, 20);
-            this.btn_Claro.TabIndex = 1;
-            this.btn_Claro.Text = "Claro";
-            this.btn_Claro.UseVisualStyleBackColor = true;
+            this.btn_Oi.AutoSize = true;
+            this.btn_Oi.Location = new System.Drawing.Point(7, 123);
+            this.btn_Oi.Name = "btn_Oi";
+            this.btn_Oi.Size = new System.Drawing.Size(41, 20);
+            this.btn_Oi.TabIndex = 3;
+            this.btn_Oi.Text = "Oi";
+            this.btn_Oi.UseVisualStyleBackColor = true;
             // 
             // btn_Tim
             // 
             this.btn_Tim.AutoSize = true;
             this.btn_Tim.Location = new System.Drawing.Point(7, 96);
             this.btn_Tim.Name = "btn_Tim";
-            this.btn_Tim.Size = new System.Drawing.Size(51, 20);
+            this.btn_Tim.Size = new System.Drawing.Size(52, 20);
             this.btn_Tim.TabIndex = 2;
             this.btn_Tim.Text = "Tim";
             this.btn_Tim.UseVisualStyleBackColor = true;
             // 
-            // btn_Oi
+            // btn_Claro
             // 
-            this.btn_Oi.AutoSize = true;
-            this.btn_Oi.Location = new System.Drawing.Point(7, 123);
-            this.btn_Oi.Name = "btn_Oi";
-            this.btn_Oi.Size = new System.Drawing.Size(40, 20);
-            this.btn_Oi.TabIndex = 3;
-            this.btn_Oi.Text = "Oi";
-            this.btn_Oi.UseVisualStyleBackColor = true;
+            this.btn_Claro.AutoSize = true;
+            this.btn_Claro.Location = new System.Drawing.Point(7, 69);
+            this.btn_Claro.Name = "btn_Claro";
+            this.btn_Claro.Size = new System.Drawing.Size(63, 20);
+            this.btn_Claro.TabIndex = 1;
+            this.btn_Claro.Text = "Claro";
+            this.btn_Claro.UseVisualStyleBackColor = true;
+            // 
+            // btn_Vivo
+            // 
+            this.btn_Vivo.AutoSize = true;
+            this.btn_Vivo.Location = new System.Drawing.Point(7, 42);
+            this.btn_Vivo.Name = "btn_Vivo";
+            this.btn_Vivo.Size = new System.Drawing.Size(57, 20);
+            this.btn_Vivo.TabIndex = 0;
+            this.btn_Vivo.Text = "Vivo";
+            this.btn_Vivo.UseVisualStyleBackColor = true;
+            this.btn_Vivo.CheckedChanged += new System.EventHandler(this.btn_Vivo_CheckedChanged);
             // 
             // lbl_BemVindo
             // 
@@ -141,7 +142,7 @@
             this.lbl_BemVindo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_BemVindo.Location = new System.Drawing.Point(218, 89);
             this.lbl_BemVindo.Name = "lbl_BemVindo";
-            this.lbl_BemVindo.Size = new System.Drawing.Size(141, 16);
+            this.lbl_BemVindo.Size = new System.Drawing.Size(142, 16);
             this.lbl_BemVindo.TabIndex = 2;
             this.lbl_BemVindo.Text = "Seja Bem Vindo(a):";
             // 
@@ -300,7 +301,7 @@
             this.lbl_Validade1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Validade1.Location = new System.Drawing.Point(366, 344);
             this.lbl_Validade1.Name = "lbl_Validade1";
-            this.lbl_Validade1.Size = new System.Drawing.Size(70, 16);
+            this.lbl_Validade1.Size = new System.Drawing.Size(71, 16);
             this.lbl_Validade1.TabIndex = 17;
             this.lbl_Validade1.Text = "Validade";
             // 
@@ -311,7 +312,7 @@
             this.lalbl_Validade2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lalbl_Validade2.Location = new System.Drawing.Point(469, 344);
             this.lalbl_Validade2.Name = "lalbl_Validade2";
-            this.lalbl_Validade2.Size = new System.Drawing.Size(70, 16);
+            this.lalbl_Validade2.Size = new System.Drawing.Size(71, 16);
             this.lalbl_Validade2.TabIndex = 18;
             this.lalbl_Validade2.Text = "Validade";
             // 
@@ -322,7 +323,7 @@
             this.lbl_Validade3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Validade3.Location = new System.Drawing.Point(567, 344);
             this.lbl_Validade3.Name = "lbl_Validade3";
-            this.lbl_Validade3.Size = new System.Drawing.Size(70, 16);
+            this.lbl_Validade3.Size = new System.Drawing.Size(71, 16);
             this.lbl_Validade3.TabIndex = 19;
             this.lbl_Validade3.Text = "Validade";
             // 
@@ -333,7 +334,7 @@
             this.lbl_Validade4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Validade4.Location = new System.Drawing.Point(663, 344);
             this.lbl_Validade4.Name = "lbl_Validade4";
-            this.lbl_Validade4.Size = new System.Drawing.Size(70, 16);
+            this.lbl_Validade4.Size = new System.Drawing.Size(71, 16);
             this.lbl_Validade4.TabIndex = 20;
             this.lbl_Validade4.Text = "Validade";
             // 
@@ -344,7 +345,7 @@
             this.lbl_Validade5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Validade5.Location = new System.Drawing.Point(366, 443);
             this.lbl_Validade5.Name = "lbl_Validade5";
-            this.lbl_Validade5.Size = new System.Drawing.Size(70, 16);
+            this.lbl_Validade5.Size = new System.Drawing.Size(71, 16);
             this.lbl_Validade5.TabIndex = 22;
             this.lbl_Validade5.Text = "Validade";
             // 
@@ -369,7 +370,7 @@
             this.lbl_Validade6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Validade6.Location = new System.Drawing.Point(469, 443);
             this.lbl_Validade6.Name = "lbl_Validade6";
-            this.lbl_Validade6.Size = new System.Drawing.Size(70, 16);
+            this.lbl_Validade6.Size = new System.Drawing.Size(71, 16);
             this.lbl_Validade6.TabIndex = 24;
             this.lbl_Validade6.Text = "Validade";
             // 
@@ -394,7 +395,7 @@
             this.lbl_Validade7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Validade7.Location = new System.Drawing.Point(567, 443);
             this.lbl_Validade7.Name = "lbl_Validade7";
-            this.lbl_Validade7.Size = new System.Drawing.Size(70, 16);
+            this.lbl_Validade7.Size = new System.Drawing.Size(71, 16);
             this.lbl_Validade7.TabIndex = 26;
             this.lbl_Validade7.Text = "Validade";
             // 
@@ -419,7 +420,7 @@
             this.lbl_Validade8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Validade8.Location = new System.Drawing.Point(663, 443);
             this.lbl_Validade8.Name = "lbl_Validade8";
-            this.lbl_Validade8.Size = new System.Drawing.Size(70, 16);
+            this.lbl_Validade8.Size = new System.Drawing.Size(71, 16);
             this.lbl_Validade8.TabIndex = 28;
             this.lbl_Validade8.Text = "Validade";
             // 
@@ -444,16 +445,17 @@
             this.lbl_SelecioneValor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_SelecioneValor.Location = new System.Drawing.Point(442, 254);
             this.lbl_SelecioneValor.Name = "lbl_SelecioneValor";
-            this.lbl_SelecioneValor.Size = new System.Drawing.Size(217, 16);
+            this.lbl_SelecioneValor.Size = new System.Drawing.Size(218, 16);
             this.lbl_SelecioneValor.TabIndex = 29;
             this.lbl_SelecioneValor.Text = "Selecione o Valor da Recarga";
             // 
             // pcb_image
             // 
-            this.pcb_image.Image = global::Operadora.Properties.Resources.Bye_Bye_Sigma_GIF;
-            this.pcb_image.Location = new System.Drawing.Point(12, 9);
+            this.pcb_image.BackColor = System.Drawing.Color.White;
+            this.pcb_image.Image = global::Operadora.Properties.Resources.top_embalagem_logo_anatel_03;
+            this.pcb_image.Location = new System.Drawing.Point(12, 256);
             this.pcb_image.Name = "pcb_image";
-            this.pcb_image.Size = new System.Drawing.Size(51, 41);
+            this.pcb_image.Size = new System.Drawing.Size(145, 203);
             this.pcb_image.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pcb_image.TabIndex = 30;
             this.pcb_image.TabStop = false;
@@ -464,7 +466,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CausesValidation = false;
-            this.ClientSize = new System.Drawing.Size(800, 498);
+            this.ClientSize = new System.Drawing.Size(800, 555);
             this.Controls.Add(this.pcb_image);
             this.Controls.Add(this.lbl_SelecioneValor);
             this.Controls.Add(this.lbl_Validade8);
